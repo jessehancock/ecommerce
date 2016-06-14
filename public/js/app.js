@@ -6,10 +6,12 @@ angular.module('app', ['ui.router'])
 	.state
 	('home', {
     url: '/',
-    templateUrl: './views/home-tmpl.html'
+    templateUrl: './views/home-tmpl.html',
+		controller: 'mainCtrl'
    })
   .state('admin', {
     url: '/admin',
-    templateUrl: './views/admin-tmpl.html'
+    templateUrl: './views/admin-tmpl.html',
+		controller: 'mainCtrl'
    })
 })

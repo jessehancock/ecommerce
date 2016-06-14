@@ -1,3 +1,15 @@
 <p>
   this is the admin side
 </p>
+<input ng-model='food.name' placeholder="title"></input>
+<input ng-model='food.price' placeholder="price"></input>
+<input ng-model='food.topping' placeholder="topping"></input>
+
+<button ng-click="postData(food)">Add new Item</button>
+
+<ul ng-repeat="food in menu">
+  <li>{{food.name}}</li>
+  <li>{{food.price}}</li>
+  <li>{{food.topping}}</li>
+  <button ng-click="deleteData(food)">Delete Item</button>
+</ul>

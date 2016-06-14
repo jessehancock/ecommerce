@@ -7,4 +7,19 @@ angular.module('app').service('mainService', function($http) {
             return response.data;
         })
     }
+
+    this.postData = function(food) {
+        return $http({
+            method: "POST",
+            url: '/api/products/',
+            data: food
+        })
+    }
+    this.deleteData = function(food) {
+        return $http({
+            method: "DELETE",
+            url: '/api/products/' + food,
+            data: food
+        })
+    }
 })
